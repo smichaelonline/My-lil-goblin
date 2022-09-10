@@ -1,11 +1,11 @@
 /* Pseudo-code: 
-1. Define the variable that will track the state of the game: winner (win or lose are the only options)
-2. Cached elements: 
-  Message element: shows messages of the goblins mood
+// 1. Define the variable that will track the state of the game: winner (win or lose are the only options)
+// 2. Cached elements: 
+// Message element: shows messages of the goblins mood
   Countdown: stores the timer and countdown 
 3. Initialize the game with init function: 
-  Call init function 
-  set winner to null 
+  // Call init function 
+  // set winner to null 
   timer 
   call render function at the end 
 4. Render the game with render function: 
@@ -33,12 +33,12 @@
 
 /*-------------------------------- Constants --------------------------------*/
 
-let winner
+
 
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-
+let winner, score
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -52,6 +52,9 @@ let toyBtn = document.querySelector("#toy")
 // handleToy();
 const startBtn = document.querySelector("#start-button")
 const resetBtn = document.querySelector("#reset-button")
+let messageEl = document.querySelector("#message")
+// const countdownEl = 
+
 
 
 
@@ -61,7 +64,31 @@ const resetBtn = document.querySelector("#reset-button")
     //totalScore += evt.currentTarget.myParam;
 // }
 
+foodBtn.addEventListener('click', handleFood)
+moneyBtn.addEventListener('click', handleMoney)
+toyBtn.addEventListener('click', handleToy)
+startBtn.addEventListener('click', render)
+resetBtn.addEventListener('click', init)
+
 
 /*-------------------------------- Functions --------------------------------*/
+
+init()
+
+function showButtons() {
+  foodBtn.removeAttribute('hidden')
+  moneyBtn.removeAttribute('hidden')
+  toyBtn.removeAttribute('hidden')
+}
+
+function init(){
+  winner = null 
+  score = 0 
+  render()
+}
+
+function render() {
+
+}
 
 //addScore function 

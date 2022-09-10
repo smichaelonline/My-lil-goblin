@@ -42,13 +42,16 @@ let winner
 
 /*------------------------ Cached Element References ------------------------*/
 
-// let foodBtn = handleClick();
+let foodBtn = document.querySelector("#food")
+let moneyBtn = document.querySelector("#money")
+let toyBtn = document.querySelector("#toy")
+// handleClick();
 // foodBtn.myParam = 5;
 // let moneyBtn = handleClick();
 // moneyBtn.myParam = 10;
-// let toyBtn = handleToy();
-// let startBtn = 
-// let resetBtn = 
+// handleToy();
+const startBtn = document.querySelector("#start-button")
+const resetBtn = document.querySelector("#reset-button")
 
 
 

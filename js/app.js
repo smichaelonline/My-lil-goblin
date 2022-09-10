@@ -7,7 +7,7 @@
   // Call init function 
   // set winner to null 
   timer 
-  call render function at the end 
+  // call render function at the end 
 4. Render the game with render function: 
   Render a message based on what is happening in the game (winner: You won! / loser: you lost!)
   render timer 
@@ -15,12 +15,13 @@
 ! Functions needed: 
   -countdown function 
   -Event listeners:
-    handle click for start button (intro screen)
-    handle click for each of the goblins needs (food, toys, gold) to deliver the need to the goblin
+    // handle click for start button (intro screen)
+    // handle click for each of the goblins needs (food, toys, gold) to deliver the need to the goblin
   -scoring function: each of the needs will have an assigned point value -when added together will reach the min number needed to win 
   -getWinner function - display message + confetti (if...else...)
 
-  5. Reset button function - create an event listener for the reset button  that will call init function 
+  // 5. Reset button function - create an event listener for the reset button  that will call init function 
+  create function to show reset button on win/lose screen 
 
   *Styling notes:
   - to add audio: fantasy music (very low volume)
@@ -89,6 +90,27 @@ function init(){
 
 function render() {
 
+/*
+if (winner === null) {
+    if(turn === 1) {
+      messageEl.textContent = "Yummy sushi! Player one - it's your turn!"
+    } else {
+      messageEl.textContent = "Chinese food? Delish! Player two - it's your turn!"
+    }
+  } else if (winner === 'T') {
+    messageEl.textContent = "Why not both? It's a tie!"
+  } else if (winner === 1) {
+    messageEl.textContent = "Good choice! Sushi wins!"
+  } else if (winner === -1) {
+    messageEl.textContent = "Chinese food wins - sign me up! "
+  }
+*/
 }
 
 //addScore function 
+
+//message function
+
+//timer function
+
+// show reset button on win/lose screen 

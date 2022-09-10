@@ -33,22 +33,32 @@
 
 /*-------------------------------- Constants --------------------------------*/
 
-
+let winner
 
 
 /*---------------------------- Variables (state) ----------------------------*/
 
 
 
-
 /*------------------------ Cached Element References ------------------------*/
 
+// let foodBtn = handleClick();
+// foodBtn.myParam = 5;
+// let moneyBtn = handleClick();
+// moneyBtn.myParam = 10;
+// let toyBtn = handleToy();
+// let startBtn = 
+// let resetBtn = 
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-
+//handleClick(evt) {
+    //totalScore += evt.currentTarget.myParam;
+// }
 
 
 /*-------------------------------- Functions --------------------------------*/
+
+//addScore function 

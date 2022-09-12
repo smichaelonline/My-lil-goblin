@@ -54,7 +54,7 @@ let toyBtn = document.querySelector("#toy")
 const startBtn = document.querySelector("#start-button")
 const resetBtn = document.querySelector("#reset-button")
 let messageEl = document.querySelector("#message")
-// const countdownEl = document.querySelector("")
+const countdownEl = document.querySelector("#countdown")
 
 
 
@@ -76,7 +76,7 @@ resetBtn.addEventListener('click', init)
 
 init()
 
-function showButtons() {
+function needsButtons() {
   foodBtn.removeAttribute('hidden')
   moneyBtn.removeAttribute('hidden')
   toyBtn.removeAttribute('hidden')

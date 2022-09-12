@@ -12,20 +12,46 @@
     type="image/png" 
     sizes="32x32"
   >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="/css/style.css">
   <title>My Lil' Goblin</title>
 </head>
 <body>
-  
-  <img src="../assets/main-char.png"> 
-  <div id="countdown">0</div>
-  <button type="button" id="start-button" alt="Start Button"> Ready? </button> 
-  <div> 
-    <input type="image" src="../assets/food.png" id="food" alt="Food Button"/>
-    <input type="image" src="../assets/toy.png" id="toy" alt="Toy Button"/>
-    <input type="image" src="../assets/money.png" id="money" alt="Money Button"/>
-  </div>
-  <h2 id="message">Message</h2>
-  <button type="button" class="btn" id="reset-button">Replay?</button>
+  <main>
+    <div>
+      <img id="intro-logo" src="../assets/logo.png"> 
+    </div>
+    <div>
+      <h1>Instructions</h1>
+      <p id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda nobis quo a quidem maiores laborum rerum delectus animi in aspernatur quas facere, ipsam fuga? Vel, numquam optio? Non, iure.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores accusamus eos quis, cupiditate nesciunt! Unde optio officiis pariatur alias inventore sunt esse similique iure soluta, ab aspernatur dolor quis.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam laborum eveniet dolore. Adipisci, illum dolores unde impedit corporis cupiditate, quos necessitatibus eos, id reiciendis ut fuga facere! Exercitationem, assumenda?
+      </p>
+    </div>
+    <div>
+      <button id="start">Start</button>
+    </div>
+    <div id="main-char">
+      <img src="../assets/main-char.png">
+    </div>
+    <div id="countdown">0</div>
+    <div id="start">
+      <button type="button" id="start-button" alt="Start Button"> Ready? </button> 
+    </div>
+    <div id="buttons"> 
+      <input type="image" src="../assets/food.png" id="food" alt="Food Button"/>
+      <input type="image" src="../assets/toy.png" id="toy" alt="Toy Button"/>
+      <input type="image" src="../assets/money.png" id="money" alt="Money Button"/>
+    </div>
+    <div id="messages">
+      <h2 id="askForNeeds">Message</h2>
+    </div>
+    <div id="replay-button">
+      <button type="button" class="btn" id="reset-button">Replay?</button>
+    </div>
+  </main>
 </body>
 </html>

@@ -1,6 +1,16 @@
+body {
+  background-color: bisque;
+  margin: auto;
+  display: grid; 
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  height: 100vh; 
+  font-weight: 500; 
+}
+
 
 .intro-logo {
-  display: grid;
   align-items: center;
   justify-content: center;
   min-height: 100vh;

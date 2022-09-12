@@ -34,7 +34,11 @@
 
 /*-------------------------------- Constants --------------------------------*/
 
-
+const randomNeeds = [
+  ['Money Please!!'],
+  ['May I have some pie?'],
+  ['I want to play with my toys!']
+]
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -69,8 +73,8 @@ const countdownEl = document.querySelector("#countdown")
 // foodBtn.addEventListener('click', handleFood)
 // moneyBtn.addEventListener('click', handleMoney)
 // toyBtn.addEventListener('click', handleToy)
-// startBtn.addEventListener('click', render)
-// resetBtn.addEventListener('click', init)
+startBtn.addEventListener('click', render)
+resetBtn.addEventListener('click', init)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -90,6 +94,9 @@ function init(){
 }
 
 function render() {
+ // foodBtn.removeAttribute('hidden')
+ // moneyBtn.removeAttribute('hidden')
+ // toyBtn.removeAttribute('hidden')
 let timer = setInterval (() => {
   min = Math.floor(seconds / 60),
   sec = seconds % 60
@@ -99,7 +106,10 @@ let timer = setInterval (() => {
     countdownEl.textContent = `${min}:${sec}`
     }
   }, 1000)
- 
+  
+}
+  
+
 
 /*
 if (winner === null) {
@@ -116,20 +126,12 @@ if (winner === null) {
     messageEl.textContent = "Chinese food wins - sign me up! "
   }
 */
-}
+
 
 //addScore function 
 
 //message function
 
 //timer function
-function renderTime() {
-min = Math.floor(seconds / 60)
-  sec = seconds % 60
-  if (sec < 10) {
-    timerEl.textContent = `${min}:0${sec}`
-  } else {
-    timerEl.textContent = `${min}:${sec}`
-  }
-}
+
 // show reset button on win/lose screen 

@@ -69,9 +69,9 @@ let gameLogo = document.querySelector('#intro-logo')
     //totalScore += evt.currentTarget.myParam;
 // }
 
-// foodBtn.addEventListener('click', keepScore)
-// moneyBtn.addEventListener('click', keepScore)
-// toyBtn.addEventListener('click', keepScore)
+foodBtn.addEventListener('click', handleClick)
+moneyBtn.addEventListener('click', handleClick)
+toyBtn.addEventListener('click', handleClick)
 hideIntroBtn.addEventListener('click', hideIntro)
 startBtn.addEventListener('click', startGame)
 resetBtn.addEventListener('click', init)
@@ -81,23 +81,15 @@ resetBtn.addEventListener('click', init)
 
 init()
 
-// function needsButtons() {
-//   foodBtn.removeAttribute('hidden')
-//   moneyBtn.removeAttribute('hidden')
-//   toyBtn.removeAttribute('hidden')
-// }
 
 function init(){
   winner = null 
-  score = 0 
+  score = 5
   render()
 }
 
-function render() {
- // foodBtn.removeAttribute('hidden')
- // moneyBtn.removeAttribute('hidden')
- // toyBtn.removeAttribute('hidden')
-let timer = setInterval (() => {
+function render() { 
+  let timer = setInterval (() => {
   min = Math.floor(seconds / 60),
   sec = seconds % 60
   if (sec < 10) {
@@ -109,47 +101,62 @@ let timer = setInterval (() => {
 }
 
 function getRandomMessage(){
-  return randomNeeds[Math.floor(Math.random() * randomNeeds.length)]
+  return messageEl.textContent = randomNeeds[Math.floor(Math.random() * randomNeeds.length)]
 }
 
 function startGame(){
-  console.log('clicked')
   let text = getRandomMessage() 
   messageEl.textContent = text
+  startBtn.setAttribute('hidden', true)
+  render()
 }
 
 function hideIntro() {
-  //console.log('please work')
   foodBtn.removeAttribute('hidden')
   moneyBtn.removeAttribute('hidden')
   toyBtn.removeAttribute('hidden')
   startBtn.removeAttribute('hidden')
   messageEl.removeAttribute('hidden')
   mainChar.removeAttribute('hidden')
+  countdownEl.removeAttribute('hidden')
   hideIntroBtn.setAttribute('hidden', true)
   rules.setAttribute('hidden', true)
   gameLogo.setAttribute('hidden', true)
 }
 
-//addScore function 
+function handleClick(evt) {
+  giveItems(evt.target.id)
+}
 
-// function keepScore(evt) {
-//   console.log(evt)
-// }
-//   if ((randomNeeds[1]=== 'Money Please!!') && evt.target.id ==='food') {
-//     score += 5
-//   } else if {
-//     ((randomNeeds[0]=== 'May I have some pie?') && evt.target.id ==='money') 
-//     score += 15 
-//   } else if{
-//     ((randomNeeds[2]) === 'I want to play with my toys!' && evt.target.id ==='toy') 
-//     score += 10 
-//   }
-// }
-//   if (randomNeeds[1])
-// }
-//message function
+function giveItems(id) {
+  console.log(messageEl)
+  //i clicked on a button and if the button i click is = to its matching phrase then i'll generate a new message 
+  if((messageEl.textContent === 'Money Please!!') && id ==='money') {
+    getRandomMessage()
+    score += 1
+    console.log('i got money',score)
+  } else if ((messageEl.textContent === 'May I have some pie?') && id ==='food'){
+    score += 1
+    getRandomMessage()
+    console.log('i got food', score)
+  } else if ((messageEl.textContent === 'I want to play with my toys!') && id ==='toy'){
+    score += 1
+    getRandomMessage()
+    console.log('playtime', score)
+  } else {
+    score -= 1 
+    console.log('not this', score)
+  }
+}
+//progress bar 
 
-//timer function
+function checkForWin() {
+  if (score <= 10) {
+    
+  }
+  //if score === 10 now display win screen 
+  // else if score=== 0 now display lose screen 
+  //if your timer reaches 0 find out where the score is and win/lose 
+  // else return 
+}
 
-// show reset button on win/lose screen 

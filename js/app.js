@@ -2,26 +2,26 @@
 // 1. Define the variable that will track the state of the game: winner (win or lose are the only options)
 // 2. Cached elements: 
 // Message element: shows messages of the goblins mood
-  Countdown: stores the timer and countdown 
-3. Initialize the game with init function: 
-  // Call init function 
-  // set winner to null 
-  timer 
-  // call render function at the end 
-4. Render the game with render function: 
-  Render a message based on what is happening in the game (winner: You won! / loser: you lost!)
-  render timer 
+//   Countdown: stores the timer and countdown 
+// 3. Initialize the game with init function: 
+//   // Call init function 
+//   // set winner to null 
+//   timer 
+//   // call render function at the end 
+// 4. Render the game with render function: 
+  // Render a message based on what is happening in the game (winner: You won! / loser: you lost!)
+  // render timer 
   progress bar 
 ! Functions needed: 
   -countdown function 
   -Event listeners:
     // handle click for start button (intro screen)
     // handle click for each of the goblins needs (food, toys, gold) to deliver the need to the goblin
-  -scoring function: each of the needs will have an assigned point value -when added together will reach the min number needed to win 
-  -getWinner function - display message + confetti (if...else...)
+  //-scoring function: each of the needs will have an assigned point value -when added together will reach the min number needed to win 
+  //-getWinner function - display message + confetti (if...else...)
 
   // 5. Reset button function - create an event listener for the reset button  that will call init function 
-  create function to show reset button on win/lose screen 
+  // create function to show reset button on win/lose screen 
 
   *Styling notes:
   - to add audio: fantasy music (very low volume)
@@ -83,16 +83,17 @@ function init(){
   score = 5
 }
 
+let timeLeft = 11
+
 function setTimer() { 
-  let timeLeft = 31
   let timer = setInterval(function() {
 	  timeLeft -= 1
     countdownEl.innerText = timeLeft
     if (timeLeft <= 0 || donePlaying === true) {
       clearInterval(timer)
-      timeLeft=31
     }
     console.log(timeLeft)
+    checkForWin()
   }, 1000)
 }
 
@@ -145,41 +146,40 @@ function giveItems(id) {
   }
   checkForWin()
 }
+
 //progress bar 
 
 function checkForWin() {
-  if (score >= 10) {
+  if (score >= 15) {
     youWin.removeAttribute('hidden')
-    resetBtn.removeAttribute('hidden')
-    foodBtn.setAttribute('hidden', true)
-    moneyBtn.setAttribute('hidden', true)
-    toyBtn.setAttribute('hidden', true)
-    countdownEl.setAttribute('hidden',true)
-    messageEl.setAttribute('hidden',true)
-    mainChar.setAttribute('hidden', true)
-    donePlaying = true 
-  } else if (score <= 0) {
+    resetBtn.removeAttribute('hidden'),
+    foodBtn.setAttribute('hidden', true),
+    moneyBtn.setAttribute('hidden', true),
+    toyBtn.setAttribute('hidden', true),
+    countdownEl.setAttribute('hidden',true),
+    messageEl.setAttribute('hidden',true),
+    mainChar.setAttribute('hidden', true),
+    donePlaying = true
+  } else if ((score <= 0) || timeLeft === 0) {
     youLose.removeAttribute('hidden')
-    resetBtn.removeAttribute('hidden')
-    foodBtn.setAttribute('hidden', true)
-    moneyBtn.setAttribute('hidden', true)
-    toyBtn.setAttribute('hidden', true)
-    countdownEl.setAttribute('hidden',true)
-    messageEl.setAttribute('hidden',true)
-    mainChar.setAttribute('hidden', true)
+    resetBtn.removeAttribute('hidden'),
+    foodBtn.setAttribute('hidden', true),
+    moneyBtn.setAttribute('hidden', true),
+    toyBtn.setAttribute('hidden', true),
+    countdownEl.setAttribute('hidden',true),
+    messageEl.setAttribute('hidden',true),
+    mainChar.setAttribute('hidden', true),
     donePlaying = true
   } else {
     return
   }
-  //if score === 10 now display win screen 
-  // else if score=== 0 now display lose screen 
-  //if your timer reaches 0 find out where the score is and win/lose 
-  // else return 
 }
 
 function resetGame(){
   donePlaying= false
   score = 5
+  timeLeft = 11
+  countdownEl.innerText = ''
   foodBtn.removeAttribute('hidden')
   moneyBtn.removeAttribute('hidden')
   toyBtn.removeAttribute('hidden')

@@ -59,9 +59,8 @@ const countdownEl = document.querySelector("#countdown")
 let rules = document.querySelector('#rules')
 let mainChar = document.querySelector('#main-char')
 let gameLogo = document.querySelector('#intro-logo')
-let
-
-
+let youWin = document.querySelector('#you-win')
+let youLose = document.querySelector('#you-lose')
 
 
 /*----------------------------- Event Listeners -----------------------------*/

@@ -65,16 +65,12 @@ let youLose = document.querySelector('#you-lose')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-//handleClick(evt) {
-    //totalScore += evt.currentTarget.myParam;
-// }
-
 foodBtn.addEventListener('click', handleClick)
 moneyBtn.addEventListener('click', handleClick)
 toyBtn.addEventListener('click', handleClick)
 hideIntroBtn.addEventListener('click', hideIntro)
 startBtn.addEventListener('click', startGame)
-resetBtn.addEventListener('click', init)
+resetBtn.addEventListener('click', resetGame)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -147,12 +143,31 @@ function giveItems(id) {
     score -= 1 
     console.log('not this', score)
   }
+  checkForWin()
 }
 //progress bar 
 
 function checkForWin() {
-  if ((timeLeft <= -1) && (score <= 10)) {
-
+  if (score >= 10) {
+    youWin.removeAttribute('hidden')
+    resetBtn.removeAttribute('hidden')
+    foodBtn.setAttribute('hidden', true)
+    moneyBtn.setAttribute('hidden', true)
+    toyBtn.setAttribute('hidden', true)
+    countdownEl.setAttribute('hidden',true)
+    messageEl.setAttribute('hidden',true)
+    mainChar.setAttribute('hidden', true)
+  } else if (score <= 0) {
+    youLose.removeAttribute('hidden')
+    resetBtn.removeAttribute('hidden')
+    foodBtn.setAttribute('hidden', true)
+    moneyBtn.setAttribute('hidden', true)
+    toyBtn.setAttribute('hidden', true)
+    countdownEl.setAttribute('hidden',true)
+    messageEl.setAttribute('hidden',true)
+    mainChar.setAttribute('hidden', true)
+  } else {
+    return
   }
   //if score === 10 now display win screen 
   // else if score=== 0 now display lose screen 
@@ -160,3 +175,20 @@ function checkForWin() {
   // else return 
 }
 
+function resetGame(){
+  winner = null 
+  score = 5
+  foodBtn.removeAttribute('hidden')
+  moneyBtn.removeAttribute('hidden')
+  toyBtn.removeAttribute('hidden')
+  startBtn.removeAttribute('hidden')
+  messageEl.removeAttribute('hidden')
+  mainChar.removeAttribute('hidden')
+  countdownEl.removeAttribute('hidden')
+  youWin.setAttribute('hidden', true)
+  youLose.setAttribute('hidden', true)
+  resetBtn.setAttribute('hidden', true)
+  render()
+}
+
+//make update to 3 buttons so they are unclickable until game start 

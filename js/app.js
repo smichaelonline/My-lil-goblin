@@ -43,7 +43,7 @@ const randomNeeds = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let winner, score
+let score, donePlaying
 let min,sec,seconds = 0 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -79,18 +79,20 @@ init()
 
 
 function init(){
-  winner = null 
+  donePlaying = false 
   score = 5
 }
 
-function render() { 
+function setTimer() { 
   let timeLeft = 31
   let timer = setInterval(function() {
 	  timeLeft -= 1
     countdownEl.innerText = timeLeft
-    if (timeLeft <= 0) {
-      clearInterval(timer);
+    if (timeLeft <= 0 || donePlaying === true) {
+      clearInterval(timer)
+      timeLeft=31
     }
+    console.log(timeLeft)
   }, 1000)
 }
 
@@ -102,7 +104,8 @@ function startGame(){
   let text = getRandomMessage() 
   messageEl.textContent = text
   startBtn.setAttribute('hidden', true)
-  render()
+  countdownEl.removeAttribute('hidden')
+  setTimer()
 }
 
 function hideIntro() {
@@ -154,6 +157,7 @@ function checkForWin() {
     countdownEl.setAttribute('hidden',true)
     messageEl.setAttribute('hidden',true)
     mainChar.setAttribute('hidden', true)
+    donePlaying = true 
   } else if (score <= 0) {
     youLose.removeAttribute('hidden')
     resetBtn.removeAttribute('hidden')
@@ -163,6 +167,7 @@ function checkForWin() {
     countdownEl.setAttribute('hidden',true)
     messageEl.setAttribute('hidden',true)
     mainChar.setAttribute('hidden', true)
+    donePlaying = true
   } else {
     return
   }
@@ -173,7 +178,7 @@ function checkForWin() {
 }
 
 function resetGame(){
-  winner = null 
+  donePlaying= false
   score = 5
   foodBtn.removeAttribute('hidden')
   moneyBtn.removeAttribute('hidden')
@@ -181,11 +186,9 @@ function resetGame(){
   startBtn.removeAttribute('hidden')
   messageEl.removeAttribute('hidden')
   mainChar.removeAttribute('hidden')
-  countdownEl.removeAttribute('hidden')
   youWin.setAttribute('hidden', true)
   youLose.setAttribute('hidden', true)
   resetBtn.setAttribute('hidden', true)
-  // render()
 }
 
 //make update to 3 buttons so they are unclickable until game start 

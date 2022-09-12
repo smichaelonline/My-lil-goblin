@@ -35,9 +35,9 @@
 /*-------------------------------- Constants --------------------------------*/
 
 const randomNeeds = [
-  ['Money Please!!'],
-  ['May I have some pie?'],
-  ['I want to play with my toys!']
+  'Money Please!!',
+  'May I have some pie?',
+  'I want to play with my toys!'
 ]
 
 
@@ -51,15 +51,14 @@ let min,sec,seconds = 0
 let foodBtn = document.querySelector("#food")
 let moneyBtn = document.querySelector("#money")
 let toyBtn = document.querySelector("#toy")
-// handleClick();
-// foodBtn.myParam = 5;
-// let moneyBtn = handleClick();
-// moneyBtn.myParam = 10;
-// handleToy();
 const startBtn = document.querySelector("#start-button")
+const hideIntroBtn = document.querySelector('#hide-intro')
 const resetBtn = document.querySelector("#reset-button")
-let messageEl = document.querySelector("#message")
+let messageEl = document.querySelector("#askForNeeds")
 const countdownEl = document.querySelector("#countdown")
+let rules = document.querySelector('#rules')
+let mainChar = document.querySelector('#main-char')
+let gameLogo = document.querySelector('#intro-logo')
 
 
 
@@ -70,10 +69,11 @@ const countdownEl = document.querySelector("#countdown")
     //totalScore += evt.currentTarget.myParam;
 // }
 
-// foodBtn.addEventListener('click', handleFood)
-// moneyBtn.addEventListener('click', handleMoney)
-// toyBtn.addEventListener('click', handleToy)
-startBtn.addEventListener('click', render)
+// foodBtn.addEventListener('click', keepScore)
+// moneyBtn.addEventListener('click', keepScore)
+// toyBtn.addEventListener('click', keepScore)
+hideIntroBtn.addEventListener('click', hideIntro)
+startBtn.addEventListener('click', startGame)
 resetBtn.addEventListener('click', init)
 
 
@@ -106,30 +106,48 @@ let timer = setInterval (() => {
     countdownEl.textContent = `${min}:${sec}`
     }
   }, 1000)
-  
 }
-  
 
+function getRandomMessage(){
+  return randomNeeds[Math.floor(Math.random() * randomNeeds.length)]
+}
 
-/*
-if (winner === null) {
-    if(turn === 1) {
-      messageEl.textContent = "Yummy sushi! Player one - it's your turn!"
-    } else {
-      messageEl.textContent = "Chinese food? Delish! Player two - it's your turn!"
-    }
-  } else if (winner === 'T') {
-    messageEl.textContent = "Why not both? It's a tie!"
-  } else if (winner === 1) {
-    messageEl.textContent = "Good choice! Sushi wins!"
-  } else if (winner === -1) {
-    messageEl.textContent = "Chinese food wins - sign me up! "
-  }
-*/
+function startGame(){
+  console.log('clicked')
+  let text = getRandomMessage() 
+  messageEl.textContent = text
+}
 
+function hideIntro() {
+  //console.log('please work')
+  foodBtn.removeAttribute('hidden')
+  moneyBtn.removeAttribute('hidden')
+  toyBtn.removeAttribute('hidden')
+  startBtn.removeAttribute('hidden')
+  messageEl.removeAttribute('hidden')
+  mainChar.removeAttribute('hidden')
+  hideIntroBtn.setAttribute('hidden', true)
+  rules.setAttribute('hidden', true)
+  gameLogo.setAttribute('hidden', true)
+}
 
 //addScore function 
 
+// function keepScore(evt) {
+//   console.log(evt)
+// }
+//   if ((randomNeeds[1]=== 'Money Please!!') && evt.target.id ==='food') {
+//     score += 5
+//   } else if {
+//     ((randomNeeds[0]=== 'May I have some pie?') && evt.target.id ==='money') 
+//     score += 15 
+//   } else if{
+//     ((randomNeeds[2]) === 'I want to play with my toys!' && evt.target.id ==='toy') 
+//     score += 10 
+//   }
+// }
+//   if (randomNeeds[1])
+// }
 //message function
 
 //timer function

@@ -24,33 +24,33 @@
     <div>
       <img id="intro-logo" src="../assets/logo.png"> 
     </div>
-    <div>
-      <h1>Instructions</h1>
+    <div id="rules">
+      <h1 id="intro-headline">Instructions</h1>
       <p id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda nobis quo a quidem maiores laborum rerum delectus animi in aspernatur quas facere, ipsam fuga? Vel, numquam optio? Non, iure.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores accusamus eos quis, cupiditate nesciunt! Unde optio officiis pariatur alias inventore sunt esse similique iure soluta, ab aspernatur dolor quis.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam laborum eveniet dolore. Adipisci, illum dolores unde impedit corporis cupiditate, quos necessitatibus eos, id reiciendis ut fuga facere! Exercitationem, assumenda?
       </p>
     </div>
     <div>
-      <button id="start">Start</button>
+      <button id="hide-intro">Start</button>
     </div>
-    <div id="main-char">
-      <img src="../assets/main-char.png">
+    <div id="main-char" hidden>
+      <img src="../assets/main-char.png" >
     </div>
-    <div id="countdown">0</div>
-    <div id="start">
-      <button type="button" id="start-button" alt="Start Button"> Ready? </button> 
+    <div id="countdown" hidden>0</div>
+    <div>
+      <button type="button" id="start-button" alt="Start Button" hidden> Ready? </button> 
     </div>
     <div id="buttons"> 
-      <input type="image" src="../assets/food.png" id="food" alt="Food Button"/>
-      <input type="image" src="../assets/toy.png" id="toy" alt="Toy Button"/>
-      <input type="image" src="../assets/money.png" id="money" alt="Money Button"/>
+      <input type="image" src="../assets/food.png" id="food" alt="Food Button" hidden/>
+      <input type="image" src="../assets/toy.png" id="toy" alt="Toy Button" hidden/>
+      <input type="image" src="../assets/money.png" id="money" alt="Money Button" hidden/>
     </div>
-    <div id="messages">
-      <h2 id="askForNeeds">Message</h2>
+    <div >
+      <h2 id="askForNeeds" hidden>Message</h2>
     </div>
     <div id="replay-button">
-      <button type="button" class="btn" id="reset-button">Replay?</button>
+      <button type="button" class="btn" id="reset-button" hidden>Replay?</button>
     </div>
   </main>
 </body>

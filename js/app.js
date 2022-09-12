@@ -81,17 +81,15 @@ init()
 function init(){
   winner = null 
   score = 5
-  render()
 }
 
 function render() { 
-  let timer = setInterval (() => {
-  min = Math.floor(seconds / 60),
-  sec = seconds % 60
-  if (sec < 10) {
-    countdownEl.textContent = `${min}:0${sec}`
-  } else {
-    countdownEl.textContent = `${min}:${sec}`
+  let timeLeft = 31
+  let timer = setInterval(function() {
+	  timeLeft -= 1
+    countdownEl.innerText = timeLeft
+    if (timeLeft <= 0) {
+      clearInterval(timer);
     }
   }, 1000)
 }
@@ -126,7 +124,6 @@ function handleClick(evt) {
 
 function giveItems(id) {
   console.log(messageEl)
-  //i clicked on a button and if the button i click is = to its matching phrase then i'll generate a new message 
   if((messageEl.textContent === 'Money Please!!') && id ==='money') {
     getRandomMessage()
     score += 1
@@ -188,7 +185,7 @@ function resetGame(){
   youWin.setAttribute('hidden', true)
   youLose.setAttribute('hidden', true)
   resetBtn.setAttribute('hidden', true)
-  render()
+  // render()
 }
 
 //make update to 3 buttons so they are unclickable until game start 

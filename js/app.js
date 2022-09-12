@@ -59,6 +59,7 @@ const countdownEl = document.querySelector("#countdown")
 let rules = document.querySelector('#rules')
 let mainChar = document.querySelector('#main-char')
 let gameLogo = document.querySelector('#intro-logo')
+let
 
 
 
@@ -151,8 +152,8 @@ function giveItems(id) {
 //progress bar 
 
 function checkForWin() {
-  if (score <= 10) {
-    
+  if ((timeLeft <= -1) && (score <= 10)) {
+
   }
   //if score === 10 now display win screen 
   // else if score=== 0 now display lose screen 

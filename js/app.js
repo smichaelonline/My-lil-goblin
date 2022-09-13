@@ -88,16 +88,16 @@ function init(){
   happinessBar.item(0).setAttribute('style', 'width:0%')
 }
 
-let timeLeft = 30
+let timeLeft = 29
 
 function setTimer() { 
+  countdownEl.innerText = 30
   let timer = setInterval(function() {
-	  timeLeft -= 1
     countdownEl.innerText = timeLeft
+	  timeLeft -= 1
     if (timeLeft <= 0 || donePlaying === true) {
       clearInterval(timer)
     }
-    console.log(timeLeft)
     checkForWin()
   }, 1000)
 }
@@ -190,7 +190,7 @@ function checkForWin() {
 function resetGame(){
   donePlaying= false
   score = 50
-  timeLeft = 30
+  timeLeft = 29
   countdownEl.innerText = ''
   foodBtn.removeAttribute('hidden')
   moneyBtn.removeAttribute('hidden')

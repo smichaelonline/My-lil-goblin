@@ -167,6 +167,7 @@ function checkForWin() {
     moneyBtn.setAttribute('hidden', true),
     toyBtn.setAttribute('hidden', true),
     countdownEl.setAttribute('hidden',true),
+    theBar.className = 'progress-invis',
     messageEl.setAttribute('hidden',true),
     mainChar.setAttribute('hidden', true),
     donePlaying = true
@@ -176,6 +177,7 @@ function checkForWin() {
     foodBtn.setAttribute('hidden', true),
     moneyBtn.setAttribute('hidden', true),
     toyBtn.setAttribute('hidden', true),
+    theBar.className = 'progress-invis',
     countdownEl.setAttribute('hidden',true),
     messageEl.setAttribute('hidden',true),
     mainChar.setAttribute('hidden', true),

@@ -61,6 +61,7 @@ let rules = document.querySelector('#rules')
 let mainChar = document.querySelector('#main-char')
 let gameLogo = document.querySelector('#intro-logo')
 const happinessBar = document.querySelectorAll('.progress-bar')
+const theBar = document.querySelector('.progress')
 let youWin = document.querySelector('#you-win')
 let youLose = document.querySelector('#you-lose')
 
@@ -82,7 +83,8 @@ init()
 
 function init(){
   donePlaying = false 
-  score = 5
+  score = 50
+  theBar.className = 'progress-invis'
   happinessBar.item(0).setAttribute('style', 'width:0%')
 }
 
@@ -109,6 +111,7 @@ function startGame(){
   messageEl.textContent = text
   startBtn.setAttribute('hidden', true)
   countdownEl.removeAttribute('hidden')
+  theBar.className= 'progress'
   happinessBar.item(0).setAttribute('style', `width:${score}%`)
   setTimer()
 }
@@ -133,23 +136,23 @@ function handleClick(evt) {
 function giveItems(id) {
   console.log(messageEl)
   if((messageEl.textContent === 'Money Please!!') && id ==='money') {
+    score += 5
     happinessBar.item(0).setAttribute('style', `width:${score}%`)
     getRandomMessage()
-    score += 5
     console.log('i got money',score)
   } else if ((messageEl.textContent === 'May I have some pie?') && id ==='food'){
-    happinessBar.item(0).setAttribute('style', `width:${score}%`)
     score += 5
+    happinessBar.item(0).setAttribute('style', `width:${score}%`)
     getRandomMessage()
     console.log('i got food', score)
   } else if ((messageEl.textContent === 'I want to play with my toys!') && id ==='toy'){
-    happinessBar.item(0).setAttribute('style', `width:${score}%`)
     score += 5
+    happinessBar.item(0).setAttribute('style', `width:${score}%`)
     getRandomMessage()
     console.log('playtime', score)
   } else {
+    score -= 15 
     happinessBar.item(0).setAttribute('style', `width:${score}%`)
-    score -= 5 
     console.log('not this', score)
   }
   checkForWin()
@@ -157,7 +160,7 @@ function giveItems(id) {
 
 
 function checkForWin() {
-  if (score >= 50) {
+  if (score >= 100) {
     youWin.removeAttribute('hidden')
     resetBtn.removeAttribute('hidden'),
     foodBtn.setAttribute('hidden', true),
@@ -184,15 +187,17 @@ function checkForWin() {
 
 function resetGame(){
   donePlaying= false
-  score = 5
-  timeLeft = 11
+  score = 50
+  timeLeft = 30
   countdownEl.innerText = ''
   foodBtn.removeAttribute('hidden')
   moneyBtn.removeAttribute('hidden')
   toyBtn.removeAttribute('hidden')
   startBtn.removeAttribute('hidden')
   messageEl.removeAttribute('hidden')
+  messageEl.textContent = ''
   mainChar.removeAttribute('hidden')
+  theBar.className = 'progress-invis'
   youWin.setAttribute('hidden', true)
   youLose.setAttribute('hidden', true)
   resetBtn.setAttribute('hidden', true)

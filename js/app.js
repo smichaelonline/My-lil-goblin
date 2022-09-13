@@ -139,21 +139,17 @@ function giveItems(id) {
     score += 5
     happinessBar.item(0).setAttribute('style', `width:${score}%`)
     getRandomMessage()
-    console.log('i got money',score)
   } else if ((messageEl.textContent === 'May I have some pie?') && id ==='food'){
     score += 5
     happinessBar.item(0).setAttribute('style', `width:${score}%`)
     getRandomMessage()
-    console.log('i got food', score)
   } else if ((messageEl.textContent === 'I want to play with my toys!') && id ==='toy'){
     score += 5
     happinessBar.item(0).setAttribute('style', `width:${score}%`)
     getRandomMessage()
-    console.log('playtime', score)
   } else {
     score -= 15 
     happinessBar.item(0).setAttribute('style', `width:${score}%`)
-    console.log('not this', score)
   }
   checkForWin()
 }
@@ -205,4 +201,3 @@ function resetGame(){
   resetBtn.setAttribute('hidden', true)
 }
 
-//make update to 3 buttons so they are unclickable until game start 

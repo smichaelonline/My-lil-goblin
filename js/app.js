@@ -43,7 +43,8 @@ const randomNeeds = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let score, donePlaying
+let score = 0 
+let donePlaying
 let min,sec,seconds = 0 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -59,6 +60,7 @@ const countdownEl = document.querySelector("#countdown")
 let rules = document.querySelector('#rules')
 let mainChar = document.querySelector('#main-char')
 let gameLogo = document.querySelector('#intro-logo')
+const happinessBar = document.querySelectorAll('.progress-bar')
 let youWin = document.querySelector('#you-win')
 let youLose = document.querySelector('#you-lose')
 
@@ -81,9 +83,10 @@ init()
 function init(){
   donePlaying = false 
   score = 5
+  happinessBar.item(0).setAttribute('style', 'width:0%')
 }
 
-let timeLeft = 11
+let timeLeft = 30
 
 function setTimer() { 
   let timer = setInterval(function() {
@@ -106,6 +109,7 @@ function startGame(){
   messageEl.textContent = text
   startBtn.setAttribute('hidden', true)
   countdownEl.removeAttribute('hidden')
+  happinessBar.item(0).setAttribute('style', `width:${score}%`)
   setTimer()
 }
 
@@ -129,28 +133,31 @@ function handleClick(evt) {
 function giveItems(id) {
   console.log(messageEl)
   if((messageEl.textContent === 'Money Please!!') && id ==='money') {
+    happinessBar.item(0).setAttribute('style', `width:${score}%`)
     getRandomMessage()
-    score += 1
+    score += 5
     console.log('i got money',score)
   } else if ((messageEl.textContent === 'May I have some pie?') && id ==='food'){
-    score += 1
+    happinessBar.item(0).setAttribute('style', `width:${score}%`)
+    score += 5
     getRandomMessage()
     console.log('i got food', score)
   } else if ((messageEl.textContent === 'I want to play with my toys!') && id ==='toy'){
-    score += 1
+    happinessBar.item(0).setAttribute('style', `width:${score}%`)
+    score += 5
     getRandomMessage()
     console.log('playtime', score)
   } else {
-    score -= 1 
+    happinessBar.item(0).setAttribute('style', `width:${score}%`)
+    score -= 5 
     console.log('not this', score)
   }
   checkForWin()
 }
 
-//progress bar 
 
 function checkForWin() {
-  if (score >= 15) {
+  if (score >= 50) {
     youWin.removeAttribute('hidden')
     resetBtn.removeAttribute('hidden'),
     foodBtn.setAttribute('hidden', true),

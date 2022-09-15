@@ -64,6 +64,7 @@ const happinessBar = document.querySelectorAll('.progress-bar')
 const theBar = document.querySelector('.progress')
 let youWin = document.querySelector('#you-win')
 let youLose = document.querySelector('#you-lose')
+let goblinSong = new Audio('../audio/happy-goblin-song.mp3')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -113,6 +114,9 @@ function startGame(){
   countdownEl.removeAttribute('hidden')
   theBar.className= 'progress'
   happinessBar.item(0).setAttribute('style', `width:${score}%`)
+  goblinSong.currentTime = 0
+  goblinSong.volume=.15
+  goblinSong.play()
   setTimer()
 }
 

@@ -38,7 +38,9 @@ ADD SCREENSHOTS HERE
 - HTML 
 
 ## Icebox 🧊
-- [ ] Add goblin reaction audio 
+- [ ] Add goblin reaction audio when you click on him 
+- [ ] Add different timing options 
+- [ ] Add infinite mode 
 - [ ] Update clicks to drag and drop  
 
 ## Credits

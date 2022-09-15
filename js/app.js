@@ -205,6 +205,6 @@ function resetGame(){
   youWin.setAttribute('hidden', true)
   youLose.setAttribute('hidden', true)
   resetBtn.setAttribute('hidden', true)
-  goblinSong.play()
+  goblinSong.play().loop = true
 }
 

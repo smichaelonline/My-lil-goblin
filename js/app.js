@@ -77,7 +77,7 @@ function startGame(){
   theBar.className= 'progress'
   happinessBar.item(0).setAttribute('style', `width:${score}%`)
   goblinSong.currentTime = 0
-  goblinSong.volume= 0
+  goblinSong.volume= .15
   goblinSong.play()
   setTimer()
 }

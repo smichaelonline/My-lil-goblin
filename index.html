@@ -28,17 +28,21 @@
 <body>
   <main>
     <div>
-      <img id="intro-logo" src="../assets/logo.png" height="300px"> 
+      <img id="intro-logo" src="../assets/logo.png" height="120px"> 
     </div>
     <div id="intro-box">
       <img id= "intro-duck" src="../assets/toy.png" alt="lil ducky" height="50px">
       <h1 id="intro-headline">Instructions</h1>
       <img id= "intro-duck"  src="../assets/toy.png"alt="lil ducky" height="50px">
     </div>
-    <div>
-      <p id="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda nobis quo a quidem maiores laborum rerum delectus animi in aspernatur quas facere, ipsam fuga? Vel, numquam optio? Non, iure.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores accusamus eos quis, cupiditate nesciunt! Unde optio officiis pariatur alias inventore sunt esse similique iure soluta, ab aspernatur dolor quis.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam laborum eveniet dolore. Adipisci, illum dolores unde impedit corporis cupiditate, quos necessitatibus eos, id reiciendis ut fuga facere! Exercitationem, assumenda?
+    <div id="intro">
+      <p>As you're coming back from your latest adventure slaying fearsome creatures, you run into a little goblin on your path. He introduces himself as "Krubkis" and waves.</p>
+
+      <p> You're a little apprehensive at first but you begin talking to the small creature and he says "I only have a few requests. If you fulfill them, i'll be your friend for life. If not, well I'm not sure I can be so kind"</p>
+
+      <p>His request will pop up and prompt you to click one of the items below. If you on the click the correct item, you'll gain points to fill his happiness bar and a new request will be displayed. If you click on the wrong item, you'll lose many more points than you gain. Krubkis has very little patience.</p>
+        
+        <p> Do you accept the challenge?</p>
       </p>
     </div>
     <div>
@@ -63,12 +67,12 @@
       <h2 id="askForNeeds" hidden>Message</h2>
     </div>
     <div id="you-win" hidden> 
-      <img alt="placeholder-happy">
-      <h2 id="win-message">He's so happy! You've made a new lifelong friend</h2>
+      <img id="win-img" alt="placeholder-happy">
+      <h2 id="win-message">He's so happy! You've made a new lifelong friend and he will join your party!</h2>
     </div>
     <div id="you-lose" hidden>
-      <img alt="placeholder-sad" > 
-      <h2 id="lose-message">You've scared him away forever. He hates you. </h2> 
+      <img id="lose-img" alt="placeholder-sad" > 
+      <h2 id="lose-message">Well, he has stolen all your gold, food, and pants. He hates you and you will never see him again. </h2> 
     </div>
     <div>
       <button id="reset-button" hidden>Replay?</button>

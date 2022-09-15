@@ -1,5 +1,5 @@
 body {
-  background-color: bisque;
+  background-color: #f4e8c5;
   margin: auto;
   display: grid; 
   align-items: center;
@@ -10,11 +10,13 @@ body {
 }
 
 h1 {
-  font-family: turnip,serif;
-  font-weight: 500;
-  font-style: normal;
-  color:#d4b314; 
+  font-family: gryphius-mvb,serif;
+  font-weight: 400;
+  font-size: 60px;
+  font-style: italic;
+  color:black; 
 }
+
 
 #intro-box {
   display: flex;
@@ -46,6 +48,60 @@ h1 {
 
 
 button {
-  
+  color: white; 
+  background-color: #226817;
+  padding: 10px;
   border-radius: 12px;
+  font-family: gryphius-mvb,serif;
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: 0px 10px 5px darkgray;
+}
+
+button:hover {
+  color:black; 
+  background-color:#b1d5ab;
+}
+
+p {
+  font-family: gryphius-mvb-small-caps,serif;
+  font-weight: 400;
+  font-size: 25px;
+  font-style: normal;
+}
+
+#win-message {
+  font-family: gryphius-mvb-small-caps,serif;
+  font-weight: 400;
+  font-size: 35px;
+  font-style: normal;
+  padding:15px 90px;
+}
+
+#lose-message {
+  font-family: gryphius-mvb-small-caps,serif;
+  font-weight: 400;
+  font-size: 35px;
+  font-style: normal;
+  padding:15px 90px;
+}
+
+#askForNeeds {
+  font-family: gryphius-mvb-small-caps,serif;
+  font-weight: 400;
+  font-size: 35px;
+  font-style: normal;
+}
+
+#countdown {
+  display:flex;
+  justify-content: center; 
+  font-family: gryphius-mvb-small-caps,serif;
+  font-weight: 400;
+  font-size: 35px;
+  font-style: normal;
+  width: 60px;
+  border:#fac10b solid 5px;
+  margin: 0px 300px;
+  border-radius: 70%; 
 }

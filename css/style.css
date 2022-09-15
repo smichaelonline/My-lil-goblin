@@ -17,7 +17,6 @@ h1 {
   color:black; 
 }
 
-
 #intro-box {
   display: flex;
   align-items: center;
@@ -94,14 +93,17 @@ p {
 }
 
 #countdown {
-  display:flex;
-  justify-content: center; 
   font-family: gryphius-mvb-small-caps,serif;
   font-weight: 400;
   font-size: 35px;
   font-style: normal;
   width: 60px;
   border:#fac10b solid 5px;
-  margin: 0px 300px;
+  margin: 0px 400px;
   border-radius: 70%; 
 }
+
+#main-char {
+  display: flex; 
+}
+

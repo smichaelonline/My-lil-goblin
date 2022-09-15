@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="./js/app.js"></script>
+  <script defer src="./js/confetti.js"></script>
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -27,29 +28,32 @@
 </head>
 <body>
   <main>
-    <div>
-      <img id="intro-logo" src="../assets/logo.png" height="120px"> 
-    </div>
-    <div id="intro-box">
-      <img id= "intro-duck" src="../assets/toy.png" alt="lil ducky" height="50px">
-      <h1 id="intro-headline">Instructions</h1>
-      <img id= "intro-duck"  src="../assets/toy.png"alt="lil ducky" height="50px">
-    </div>
-    <div id="intro">
-      <p>As you're coming back from your latest adventure slaying fearsome creatures, you run into a little goblin on your path. He introduces himself as "Krubkis" and waves.</p>
+    <div class ="intro-block background">
+      <div>
+        <img id="intro-logo" src="../assets/logo.png" height="120px"> 
+      </div>
+      <div id="intro-box">
+        <img id= "intro-duck" src="../assets/toy.png" alt="lil ducky" height="50px">
+        <h1 id="intro-headline">Instructions</h1>
+        <img id= "intro-duck"  src="../assets/toy.png"alt="lil ducky" height="50px">
+      </div>
+      <div id="intro">
+        <p>As you're coming back from your latest adventure slaying fearsome creatures, you run into a little goblin on your path. He introduces himself as "Krubkis" and waves.</p>
 
-      <p> You're a little apprehensive at first but you begin talking to the small creature and he says "I only have a few requests. If you fulfill them, i'll be your friend for life. If not, well I'm not sure I can be so kind"</p>
+        <p> You're a little apprehensive at first but you begin talking to the small creature and he says "I only have a few requests. If you fulfill them, i'll be your friend for life. If not, well I'm not sure I can be so kind"</p>
 
-      <p>His request will pop up and prompt you to click one of the items below. If you on the click the correct item, you'll gain points to fill his happiness bar and a new request will be displayed. If you click on the wrong item, you'll lose many more points than you gain. Krubkis has very little patience.</p>
-        
-        <p> Do you accept the challenge?</p>
-      </p>
-    </div>
-    <div>
-      <button id="hide-intro">Start</button>
+        <p>His request will pop up and prompt you to click one of the items below. If you on the click the correct item, you'll gain points to fill his happiness bar and a new request will be displayed. If you click on the wrong item, you'll lose many more points than you gain. Krubkis has very little patience.</p>
+          
+          <p> Do you accept the challenge?</p>
+        </p>
+      </div>
+      <div>
+        <button id="hide-intro">Start</button>
+      </div>
     </div>
     <div id="main-char" hidden>
       <img src="../assets/main-char.png" >
+      <img src="../assets/goblin-house.png" height="250px">
     </div>
     <div id="countdown" hidden></div>
     <div>

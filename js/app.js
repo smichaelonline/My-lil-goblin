@@ -92,7 +92,6 @@ function hideIntro() {
   startBtn.removeAttribute('hidden')
   messageEl.removeAttribute('hidden')
   mainChar.removeAttribute('hidden')
-  countdownEl.removeAttribute('hidden')
   hideIntroBtn.setAttribute('hidden', true)
   rules.setAttribute('hidden', true)
   introBox.setAttribute('hidden', true)
@@ -137,6 +136,7 @@ function checkForWin() {
     mainChar.setAttribute('hidden', true),
     donePlaying = true
     goblinSong.pause()
+    confetti.start(3000)
   } else if ((score <= 0) || timeLeft === 0) {
     youLose.removeAttribute('hidden')
     resetBtn.removeAttribute('hidden'),

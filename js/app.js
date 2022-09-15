@@ -1,38 +1,3 @@
-/* Pseudo-code: 
-// 1. Define the variable that will track the state of the game: winner (win or lose are the only options)
-// 2. Cached elements: 
-// Message element: shows messages of the goblins mood
-//   Countdown: stores the timer and countdown 
-// 3. Initialize the game with init function: 
-//   // Call init function 
-//   // set winner to null 
-//   timer 
-//   // call render function at the end 
-// 4. Render the game with render function: 
-  // Render a message based on what is happening in the game (winner: You won! / loser: you lost!)
-  // render timer 
-  progress bar 
-! Functions needed: 
-  -countdown function 
-  -Event listeners:
-    // handle click for start button (intro screen)
-    // handle click for each of the goblins needs (food, toys, gold) to deliver the need to the goblin
-  //-scoring function: each of the needs will have an assigned point value -when added together will reach the min number needed to win 
-  //-getWinner function - display message + confetti (if...else...)
-
-  // 5. Reset button function - create an event listener for the reset button  that will call init function 
-  // create function to show reset button on win/lose screen 
-
-  *Styling notes:
-  - to add audio: fantasy music (very low volume)
-  - light/dark mode - if there is time! 
-  - Intro page: Drop in with the logo -> animate.css 
-    fade out instructions when player presses start 
-
-
-*/ 
-
-/*-------------------------------- Constants --------------------------------*/
 
 const randomNeeds = [
   'Money Please!!',
@@ -40,14 +5,10 @@ const randomNeeds = [
   'I want to play with my toys!'
 ]
 
-
-/*---------------------------- Variables (state) ----------------------------*/
-
 let score = 0 
 let donePlaying
 let min,sec,seconds = 0 
 
-/*------------------------ Cached Element References ------------------------*/
 
 let foodBtn = document.querySelector("#food")
 let moneyBtn = document.querySelector("#money")
@@ -68,17 +29,12 @@ let youLose = document.querySelector('#you-lose')
 let goblinSong = new Audio('../audio/game-goblin-song.mp3')
 
 
-/*----------------------------- Event Listeners -----------------------------*/
-
 foodBtn.addEventListener('click', handleClick)
 moneyBtn.addEventListener('click', handleClick)
 toyBtn.addEventListener('click', handleClick)
 hideIntroBtn.addEventListener('click', hideIntro)
 startBtn.addEventListener('click', startGame)
 resetBtn.addEventListener('click', resetGame)
-
-
-/*-------------------------------- Functions --------------------------------*/
 
 // fade in intro page upon opening 
 rules.className= 'animate__animated animate__fadeInDown'
@@ -121,7 +77,7 @@ function startGame(){
   theBar.className= 'progress'
   happinessBar.item(0).setAttribute('style', `width:${score}%`)
   goblinSong.currentTime = 0
-  goblinSong.volume=.15
+  goblinSong.volume= 0
   goblinSong.play()
   setTimer()
 }
@@ -168,7 +124,6 @@ function giveItems(id) {
   checkForWin()
 }
 
-
 function checkForWin() {
   if (score >= 100) {
     youWin.removeAttribute('hidden')
@@ -192,6 +147,7 @@ function checkForWin() {
     countdownEl.setAttribute('hidden',true),
     messageEl.setAttribute('hidden',true),
     mainChar.setAttribute('hidden', true),
+    startBtn.setAttribute('hidden', true)
     donePlaying = true
     goblinSong.pause()
   } else {

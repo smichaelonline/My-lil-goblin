@@ -16,18 +16,12 @@ h1 {
   color:#d4b314; 
 }
 
-.intro-box {
-  display: grid;
-  grid-template-rows: 1;
-  align-items: flex-start;
-  
-}
-
-.intro-logo {
+#intro-box {
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
+
 
 .progress-invis {
   display: none;

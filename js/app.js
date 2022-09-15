@@ -128,8 +128,11 @@ function startGame(){
 
 function hideIntro() {
   foodBtn.removeAttribute('hidden')
+  foodBtn.className='animate__animated animate__fadeInUp'
   moneyBtn.removeAttribute('hidden')
+  moneyBtn.className='animate__animated animate__fadeInUp'
   toyBtn.removeAttribute('hidden')
+  toyBtn.className='animate__animated animate__fadeInUp'
   startBtn.removeAttribute('hidden')
   messageEl.removeAttribute('hidden')
   mainChar.removeAttribute('hidden')

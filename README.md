@@ -1,5 +1,5 @@
 # My Lil' Goblin
-*a small friend simulator*
+*A small friend simulator*
 
 ## About the Game 
 A description of your game. Background info about why you chose the game is a nice touch.
@@ -10,8 +10,6 @@ A description of your game. Background info about why you chose the game is a ni
 
 As the little goblin asks for things ("May I have some pie?", "Can I play with my toys?" or "Money Please"), be sure to give him what he wants by clicking the appropriate icon in a timely manner or you may run into some trouble. 
 
-
-Include a link to your deployed game and any instructions you deem important.
 ### Game Requirements: 
 - [x] Artwork 
 - [x] Animation 
@@ -26,9 +24,9 @@ ADD SCREENSHOTS AND LINK TO WHIMSICAL
 ADD SCREENSHOTS HERE
 
 ## Technologies Used 
-Javascript
-CSS
-HTML 
+- Javascript
+- CSS
+- HTML 
 
 ## Icebox 🧊
 - [ ] Add goblin reaction audio 

@@ -64,7 +64,7 @@ const happinessBar = document.querySelectorAll('.progress-bar')
 const theBar = document.querySelector('.progress')
 let youWin = document.querySelector('#you-win')
 let youLose = document.querySelector('#you-lose')
-let goblinSong = new Audio('../audio/happy-goblin-song.mp3')
+let goblinSong = new Audio('../audio/game-goblin-song.mp3')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -171,6 +171,7 @@ function checkForWin() {
     messageEl.setAttribute('hidden',true),
     mainChar.setAttribute('hidden', true),
     donePlaying = true
+    goblinSong.pause()
   } else if ((score <= 0) || timeLeft === 0) {
     youLose.removeAttribute('hidden')
     resetBtn.removeAttribute('hidden'),
@@ -182,6 +183,7 @@ function checkForWin() {
     messageEl.setAttribute('hidden',true),
     mainChar.setAttribute('hidden', true),
     donePlaying = true
+    goblinSong.pause()
   } else {
     return
   }
@@ -203,5 +205,6 @@ function resetGame(){
   youWin.setAttribute('hidden', true)
   youLose.setAttribute('hidden', true)
   resetBtn.setAttribute('hidden', true)
+  goblinSong.play()
 }
 

@@ -1,5 +1,5 @@
 # My Lil' Goblin
-[logo]: ../my-lil-goblin/assets/logo.png
+[logo]: (../my-lil-goblin/assets/logo.png)
 *A small friend simulator*
 
 ## About the Game 

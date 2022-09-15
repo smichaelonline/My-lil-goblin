@@ -1,6 +1,6 @@
-# My Lil' Goblin
 ![logo](https://github.com/smichaelonline/My-lil-goblin/blob/main/assets/logo.png)
 
+# My Lil' Goblin
 *A small friend simulator*
 
 ## About the Game 

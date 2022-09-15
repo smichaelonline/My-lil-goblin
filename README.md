@@ -13,16 +13,17 @@
 - [x] Timer
 
 ## Planning
+ADD SCREENSHOTS AND LINK TO WHIMSICAL 
 
 ## Gameplay
+ADD SCREENSHOTS HERE
 
 ## Technologies Used 
-
 Javascript
 CSS
 HTML 
 
-## Icebox 
+## Icebox 🧊
 - [ ] Add goblin reaction audio 
 - [ ] Update clicks to drag and drop  
 

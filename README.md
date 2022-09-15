@@ -41,5 +41,7 @@ ADD SCREENSHOTS HERE
 - [ ] Add goblin reaction audio 
 - [ ] Update clicks to drag and drop  
 
+## Credits
+[Audio from cabled_mess on Freesound](https://freesound.org/people/cabled_mess/sounds/335361/)
 
 

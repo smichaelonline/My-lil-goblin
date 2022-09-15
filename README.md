@@ -2,7 +2,14 @@
 *A small friend simulator*
 
 ## About the Game 
-A description of your game. Background info about why you chose the game is a nice touch.
+As you get you're coming back from your latest adventure, you run into a little goblin on your path. He introduces himself as "Krubkis" and puts out a small hand. 
+
+You're a little apprehensive at first but you begin talking to the small creature and he says *"I only have a few requests. If you fulfill them, i'll be your friend for life. If not, well I'm not sure I can be so kind*
+
+Do you accept the challenge?
+
+*Inspired by my small pug daisy who I call Goblin and is quite demanding* 
+
 ## Getting Started 
 [Play My Lil' Goblin](https://my-lil-goblin.netlify.app/)
 
@@ -10,7 +17,7 @@ A description of your game. Background info about why you chose the game is a ni
 
 As the little goblin asks for things ("May I have some pie?", "Can I play with my toys?" or "Money Please"), be sure to give him what he wants by clicking the appropriate icon in a timely manner or you may run into some trouble. 
 
-### Game Requirements: 
+**Game Requirements:**
 - [x] Artwork 
 - [x] Animation 
 - [x] Audio

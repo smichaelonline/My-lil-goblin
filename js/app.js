@@ -57,7 +57,8 @@ const hideIntroBtn = document.querySelector('#hide-intro')
 const resetBtn = document.querySelector("#reset-button")
 let messageEl = document.querySelector("#askForNeeds")
 const countdownEl = document.querySelector("#countdown")
-let rules = document.querySelector('#rules')
+let rules = document.querySelector('#intro')
+let introBox = document.querySelector('#intro-box')
 let mainChar = document.querySelector('#main-char')
 let gameLogo = document.querySelector('#intro-logo')
 const happinessBar = document.querySelectorAll('.progress-bar')
@@ -79,8 +80,13 @@ resetBtn.addEventListener('click', resetGame)
 
 /*-------------------------------- Functions --------------------------------*/
 
-init()
+// fade in intro page upon opening 
+rules.className= 'animate__animated animate__fadeInDown'
+introBox.className='animate__animated animate__fadeInDown'
+gameLogo.className='animate__animated animate__fadeInDown'
+hideIntroBtn.className='animate__animated animate__fadeIn'
 
+init()
 
 function init(){
   donePlaying = false 
@@ -130,6 +136,7 @@ function hideIntro() {
   countdownEl.removeAttribute('hidden')
   hideIntroBtn.setAttribute('hidden', true)
   rules.setAttribute('hidden', true)
+  introBox.setAttribute('hidden', true)
   gameLogo.setAttribute('hidden', true)
 }
 
@@ -205,6 +212,5 @@ function resetGame(){
   youWin.setAttribute('hidden', true)
   youLose.setAttribute('hidden', true)
   resetBtn.setAttribute('hidden', true)
-  goblinSong.play().loop = true
 }
 

@@ -9,6 +9,19 @@ body {
   font-weight: 500; 
 }
 
+h1 {
+  font-family: turnip,serif;
+  font-weight: 500;
+  font-style: normal;
+  color:#d4b314; 
+}
+
+.intro-box {
+  display: grid;
+  grid-template-rows: 1;
+  align-items: flex-start;
+  
+}
 
 .intro-logo {
   align-items: center;

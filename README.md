@@ -23,10 +23,8 @@ CSS
 HTML 
 
 ## Icebox 
-- [x] Artwork 
-- [x] Animation 
-- [x] Audio
-- [x] Scoring
-- [x] Timer
+- [ ] Add goblin reaction audio 
+- [ ] Update clicks to drag and drop  
+
 
 

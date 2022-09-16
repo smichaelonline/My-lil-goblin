@@ -29,10 +29,10 @@ As the little goblin asks for things ("May I have some pie?", "Can I play with m
 - [x] Timer
 
 ## Planning
-ADD SCREENSHOTS AND LINK TO WHIMSICAL 
+
 
 ## Gameplay
-ADD SCREENSHOTS HERE
+
 
 ## Technologies Used 
 - Javascript

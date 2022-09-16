@@ -29,10 +29,12 @@ As the little goblin asks for things ("May I have some pie?", "Can I play with m
 - [x] Timer
 
 ## Planning
-
+![Planning-image](https://github.com/smichaelonline/My-lil-goblin/blob/main/screen-shots/planning.png)
 
 ## Gameplay
-
+![in-game](https://github.com/smichaelonline/My-lil-goblin/blob/main/screen-shots/gameplay.png)
+![win-screen](https://github.com/smichaelonline/My-lil-goblin/blob/main/screen-shots/Win-screen.png)
+![lose-screen](https://github.com/smichaelonline/My-lil-goblin/blob/main/screen-shots/lose-screen.png)
 
 ## Technologies Used 
 - Javascript

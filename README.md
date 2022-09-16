@@ -48,7 +48,7 @@ As the little goblin asks for things ("May I have some pie?", "Can I play with m
 - [ ] Update clicks to drag and drop  
 
 ## Credits
-[Audio from cabled_mess on Freesound](https://freesound.org/people/cabled_mess/sounds/335361/)
-[Goblin house from thejamesanderson on IndieDB](https://www.indiedb.com/news/adventure-craft-blog-56-goblin-camp-renovation-bosses-and-new-armor)
+- [Audio from cabled_mess on Freesound](https://freesound.org/people/cabled_mess/sounds/335361/)
+- [Goblin house from thejamesanderson on IndieDB](https://www.indiedb.com/news/adventure-craft-blog-56-goblin-camp-renovation-bosses-and-new-armor)
 
 
